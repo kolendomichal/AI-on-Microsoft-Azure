@@ -27,11 +27,10 @@ This is necessary to log in to Azure Portal and start creating your new resource
 1. Firstly we create the **Speech** resource in our resource group.
 2. From **Keys and Endpoints** section in left panel, copy one of the two keys shown there. It will be required to authorize through REST-API or using SDK.
 3. Create a C# project, import `Microsoft.CognitiveServices.Speech`. Boilerplate code can be found on [boilerplate](https://docs.microsoft.com/en-us/learn/modules/transcribe-speech-input-text/5-exercise-convert-speech-from-audio-file?pivots=csharp).
-   - authorize you program
+   - authorize you program using the copied key
 4. Load your .wav file and run the program
 
 If you are not using **SDK**, you can also use REST-API method. Boilerplate code can be found on official [documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-speech-to-text).
-Here you will have to use your subscription key, which can be found in resource configuration in azure portal.
 
 There are two pricing configurations you can choose from:
 
@@ -68,6 +67,7 @@ This is necessary to log in to Azure Portal and start creating your new resource
 1. Firstly we create the **Speech** resource in our resource group.
 2. From **Keys and Endpoints** section in left panel, copy one of the two keys shown there. It will be required to authorize through REST-API or using SDK.
 3. Create a C# project, import `Microsoft.CognitiveServices.Speech`. Boilerplate code can be found on [boilerplate](https://docs.microsoft.com/en-us/learn/modules/synthesize-text-input-speech/3-synthesize-speech-audio-output?pivots=csharp).
+   - authorize you program using the copied key
 4. Load your text file and run the program
 
 If you are not using **SDK**, you can also use REST-API method. Boilerplate code can be found on official [documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech).
@@ -106,6 +106,7 @@ This is necessary to log in to Azure Portal and start creating your new resource
 1. Firstly we create the **Speech** resource in our resource group.
 2. From **Keys and Endpoints** section in left panel, copy one of the two keys shown there. It will be required to authorize through REST-API or using SDK.
 3. Create a C# project, import `Microsoft.CognitiveServices.Speech`. Boilerplate code can be found on [boilerplate](https://docs.microsoft.com/en-us/learn/modules/translate-speech-speech-service/2-translate-speech-text-microphone-input?pivots=csharp).
+   - authorize you program using the copied key
 4. Run the program and when the prompt says "Say something", speak an english phrase and then pause.
 
 If you are not using **SDK**, you can also use Speech CLI method..
