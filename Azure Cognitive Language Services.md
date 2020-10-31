@@ -107,7 +107,7 @@ Prerequisities:
 - microsoft account
 - active subscription on given microsoft account
 
-1. Create your resource and select desired pricing tiers. Student
+1. Create your resource and select desired pricing tiers.
 2. From **Keys** section in left panel, copy one of the two keys shown there.
 3. Azure requires you to create the LUIS app in the same geographic location where you created your service. Select one of the URLs for your location:
    - [North America](https://www.luis.ai/)
@@ -118,7 +118,7 @@ Prerequisities:
 6. Create __entity__, name the entity faced and select __Machine learned__ for __Entity type__.
 7. Train the LUIS model.
 8. Create a public endpoint for the LUIS service
-9. Test your endpoint by providing a sentence.
+9. Test your endpoint by providing a sentence. Paste your subscription key into **Ocp-Apim-Subscription-Key** box.
 
 Example of LUIS response:
 
@@ -154,11 +154,65 @@ There are two pricing configurations you can choose from:
     - Voice requests:
       - €4,639 for 1000 transactions
 
-
 ## Azure Text Analytics
 
 ### Introduction
 
+Azure Text Analytics is a tool which core usage is based on one thing: **understanding and analyzing unstructured text**. This enables us to answer questions such as:
+
+- What language was this essay written in?
+- What emotion does that sentence convey?
+- Is this review a positive or negative one?
+
+Text Analytics API extracts information from text. You can identify language, discover sentiment, key phrases or detect well-known entities.
+Service uses a machine learning classification algorithm which gives a score between 0 and 1. Scores closer to 1 indicate positive sentiment, while scores closer to 0 indicate negative sentiment.
+
 ### Use Case
 
-### Usage
+1. A company has an online shop with thousands of customer reviews. Text Analytics can be used to sort that data, look for negative reviews and save them in our desired location. We can further analyze those reviews in order to provide better service.
+2. Attach Text Analytic API to a chatbot and analyze conversation with consultants. We will be able to detect consultant tone and his attitude to the customer.
+
+### How to
+
+Prerequisities:
+
+- microsoft account
+- active subscription on given microsoft account
+
+1. Create your resource and select desired pricing tiers.
+2. Get the access key to your resource from **Keys** section on the left panel.
+3. Navigate to the URL `https://[location].dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0`. Replace location with location provided while creating Text Analytics API.
+4. From the left menu select **Sentiment**. Requests are sent to `https://[location].api.cognitive.microsoft.com/text/analytics/v2.0/sentiment`. Paste your subscription key into **Ocp-Apim-Subscription-Key** box and make some calls.
+
+Example response:
+
+```JSON
+{
+    "documents": [{
+        "score": 0.9869070649,
+        "id": "1"
+    }]
+}
+```
+
+There are six pricing configurations you can choose from:
+
+- F0 tier:
+  - Functions:
+    - Sentiment Analysis
+    - Key phrase extraction
+    - Language detection
+    - Named entity recognition
+  - Price - 5000 free transactions per month
+- S0 tier:
+  - Functions:
+    - Sentiment Analysis
+    - Key phrase extraction
+    - Language detection
+    - Named entity recognition
+  - Price - $95.629/month. Up to 25000 transactions per month
+- S1/S2/S3/S4 tiers with same function as S0 tier. They differ only in pricing and maximum transactions.
+  - S1 - $319.821/month, up to 100 000 transactions
+  - S2 - $1,279.68/month, up to 500 000 transactions
+  - S3 - $3,199.796/month, up to 2 500 000 transactions
+  - S4 - $6,399.988/month, up to 10 000 000 transactions
