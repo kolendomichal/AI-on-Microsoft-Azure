@@ -64,10 +64,10 @@ There are two pricing configurations you can choose from:
 
 - F0 tier - 1 transactions per second. Up to 5000 free transactions per month.
 - S0 tier - 10 transactions per second. Up to 1 000 000 transactions.
-  - €0,844 for 1000 transactions
-  - €0,633 for 1000 transactions (1 milion to 5 milion transactions)
-  - €0,506 for 1000 transactions (5 milion to 10 milion transactions)
-  - €0,338 for 1000 transactions (more than 10 milion)
+  - €0,844 for 1 000 000 transactions
+  - €0,633 for 1 000 000 transactions (1 milion to 5 milion transactions)
+  - €0,506 for 1 000 000 transactions (5 milion to 10 milion transactions)
+  - €0,338 for 1 000 000 transactions (more than 10 milion)
 
 ## Language Understanding (LUIS)  
 
