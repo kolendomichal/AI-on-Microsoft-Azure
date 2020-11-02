@@ -1,12 +1,12 @@
 # Azure Cognitive Speech Services
 
-Azure Cognitive Speech Services provide a set of tools, which can be used to conver audio to text, translating speech or converting text to speech.
+Azure Cognitive Speech Services provide a set of tools, which can be used to convert audio to text, translating speech or converting text to speech.
 
 ## Transcribe speech input to text
 
 ### Introduction
 
-Transcribe speech input to text, as title suggests, provides real-time transciption of audio-streams. It is using machine learning and artificial intelligence to convert audio input to text output.
+Transcribe speech input to text, as title suggests, provides real-time transciption of audio-streams. It is using a machine learning and artificial intelligence to convert audio input to text output.
 
 Service is exposed via REST-based APIs or the Speech SDK. They allow developer to integrate those services to any solution.
 
@@ -30,7 +30,7 @@ This is necessary to log in to Azure Portal and start creating your new resource
    - authorize you program using the copied key
 4. Load your .wav file and run the program
 
-If you are not using **SDK**, you can also use REST-API method. Boilerplate code can be found on official [documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-speech-to-text).
+If you are not using **SDK**, you can also use REST-API method. Boilerplate code can be found in the official [documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-speech-to-text).
 
 There are two pricing configurations you can choose from:
 
@@ -68,9 +68,9 @@ This is necessary to log in to Azure Portal and start creating your new resource
 2. From **Keys and Endpoints** section in left panel, copy one of the two keys shown there. It will be required to authorize through REST-API or using SDK.
 3. Create a C# project, import `Microsoft.CognitiveServices.Speech`. Boilerplate code can be found on [boilerplate](https://docs.microsoft.com/en-us/learn/modules/synthesize-text-input-speech/3-synthesize-speech-audio-output?pivots=csharp).
    - authorize you program using the copied key
-4. Load your text file and run the program
+4. Load your text file and run the program.
 
-If you are not using **SDK**, you can also use REST-API method. Boilerplate code can be found on official [documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech).
+If you are not using **SDK**, you can also use REST-API method. Boilerplate code can be found in the official [documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech).
 
 There are two pricing configurations you can choose from:
 
@@ -85,13 +85,13 @@ There are two pricing configurations you can choose from:
 
 ### Introduction
 
-Speech translation service is used for translating spoken phrases in real-time to a selected second language. This service enables people from different countries to communicate easily. 
+Speech translation service is used for translating spoken phrases in real-time to a selected second language. This service enables people from different countries to communicate easily.
 
-Using neural network system which was trained on thousands and thousand of hour of incoming audio speech service perform automatic recognition of speech. Model is trained on human-to-human interactions.
+Using neural network system, which was trained on thousands and thousand of hours of incoming audio speech, service performs automatic recognition of speech. Model is trained on a human-to-human interactions.
 
 ### Use cases
 
-1. Meeting of European parliament or any conference where there is a huge mix of ethnic and language groups. Service can translate on the fly the presented/speaker speech.
+1. Meeting of European parliament or any conference where there is a huge mix of ethnic and language groups. Service can translate on the fly the presenter speech.
 2. During travelling, normal conversation like shopping or asking for directions could be done with help of that service.
 
 ### How to
@@ -109,7 +109,7 @@ This is necessary to log in to Azure Portal and start creating your new resource
    - authorize you program using the copied key
 4. Run the program and when the prompt says "Say something", speak an english phrase and then pause.
 
-If you are not using **SDK**, you can also use Speech CLI method..
+If you are not using **SDK**, you can also use Speech CLI method.
 
 There are two pricing configurations you can choose from:
 
