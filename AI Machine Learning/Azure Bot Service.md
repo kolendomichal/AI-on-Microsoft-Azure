@@ -45,3 +45,35 @@ There are two pricing configurations you can choose from:
   - features:
     - up to 100 transactions per minute
   - $12.80 for unlimited managed documents
+
+## Bot Framework Composer
+
+### Introduction
+
+Bot Framework Composer is an azure service which allows user to create an advanced conversational bot without writing code. It uses visual designer to help build complicated mechanism using simple drag & drop.
+
+**Bot Framework Emulator** enables you to:
+- use adaptive dialogs for Language Generation
+- export created bot to reusable assets in the form of JSON and Markdown files
+
+### Use cases
+
+1. Chatbot for helping new motorcycle drivers decide on begginner motorcycle.
+2. TodoList bot for adding new tasks and assignments to your TODOapp (of your choice).
+3. Medical chatbot for entry-diagnosis of illnesses
+
+### How to
+
+Prerequisities:
+
+- [.Net Core SKD 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator/releases/tag/v4.10.0)
+- [Bot Framework Composer (windows version)](https://aka.ms/bf-composer-download-win)
+
+1. Start the *Bot Framework Composer* application
+2. Select new Bot and select on of the available boilerplates
+
+Watching 5 Minute Intro located in *Bot Framework Composer* dashboard is beneficial before starting working on your bot.
+
+Bot Framework Composer is free, but in order to use Azure Services like *LUIS* or *QnA* you need to have
+an active azure subscription and related resources created in a resource group.
