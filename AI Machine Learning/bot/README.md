@@ -41,7 +41,7 @@ Bot was created using Bot Framework Composer. Every action and dialog was create
      4. Save and train your knowledge base
      5. Go to settings and copy **KnowledgeBaseId** , **EndpointKey** and **Host**. These settings will be pasted into bot settings
    - Azure Function
-     1. Open project located in bot framework folder [MotorcycleChoiceHelper.sln](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Machine%20Learning/bot/MotorcycleChoiceHelper/MotorcycleChoiceHelper.sln).
+     1. Open project located in bot framework folder [MotorcycleChoiceHelper.sln](AI Machine Learning\bot\MotorcycleChoiceHelper\MotorcycleChoiceHelper.sln).
      2. Launch it in Visual Studio 2019.
      3. Right click project name and select **Publish**. Go through all the steps and deploy it in your resource group.
      4. Navigate to your Azure Function in Azure and copy App key **_master**
@@ -49,16 +49,16 @@ Bot was created using Bot Framework Composer. Every action and dialog was create
 Images with keys to copy:
 
 **Authoring key**
-![authoring_key](./bot/graphics/authoring_key.png)
+![authoring_key](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Machine%20Learning/bot/graphics/authoring_key.png)
 
 **KnowledgeBaseId** , **EndpointKey** and **Host**.
-![qna](./bot/graphics/qna.png)
+![qna](./graphics/qna.png)
 
 **Function App Key**
-![azure_function](./bot/graphics/azure_function.png)
+![azure_function](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Machine%20Learning/bot/graphics/azure_function.png)
 
 Paste LUIS and QnA settings into bot settings:
-![bot_settings](./bot/graphics/bot_settings.png)
+![bot_settings](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Machine%20Learning/bot/graphics/bot_settings.png)
 
 Paste Azure Function app key into two HTTP requests in **BeginnerMotorcycleDialog**
-![bot_settings](./bot/graphics/http_req.png)
+![bot_settings](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Machine%20Learning/bot/graphics/http_req.png)
