@@ -1,0 +1,41 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8uUM8E",
+    "name": "BeginnerAdvice",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "hOXLrw"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.QnAMakerDialog",
+          "$designer": {
+            "id": "9pdeW6"
+          },
+          "noAnswer": "Sorry, I did not find an answer.",
+          "threshold": 0.3,
+          "activeLearningCardTitle": "Did you mean:",
+          "cardNoMatchText": "None of the above.",
+          "cardNoMatchResponse": "Thanks for the feedback.",
+          "top": 3,
+          "isTest": false,
+          "hostname": "https://motorcycle-helper-qna.azurewebsites.net/qnamaker",
+          "knowledgeBaseId": "36518106-d13d-4826-8b0f-deed88b02892",
+          "endpointKey": "75408a62-70a1-4aef-be00-699299ad3284"
+        }
+      ]
+    }
+  ],
+  "generator": "BeginnerAdvice.lg",
+  "recognizer": "BeginnerAdvice.lu.qna",
+  "id": "BeginnerAdvice"
+}

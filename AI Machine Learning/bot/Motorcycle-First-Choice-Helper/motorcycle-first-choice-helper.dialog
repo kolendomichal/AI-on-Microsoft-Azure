@@ -1,0 +1,137 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "name": "Motorcycle-First-Choice-Helper",
+    "id": "232009",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "recognizer": "motorcycle-first-choice-helper.lu.qna",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "303881"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "037398",
+            "name": "Send a response"
+          },
+          "activity": "${SendActivity_037398()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "OyuW1y",
+        "name": "BeginnerMotorcycle"
+      },
+      "intent": "BeginnerMotorcycle",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "Ez9yrs"
+          },
+          "activityProcessed": true,
+          "dialog": "BeginnerMotorcycleDialog"
+        }
+      ],
+      "condition": "#BeginnerMotorcycle.Score >= 0.7"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "agcadC",
+        "name": "BuyingWarnings"
+      },
+      "intent": "BuyingWarnings",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "tOIxmZ"
+          },
+          "activity": "${SendActivity_tOIxmZ()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "fCPTCa"
+          },
+          "activityProcessed": true,
+          "dialog": "BuyingWarningsDialog"
+        }
+      ],
+      "condition": "#BuyingWarnings.Score >= 0.7",
+      "runOnce": false
+    },
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "aHoYa1"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "name": "Loop: for each item",
+            "description": "",
+            "id": "ryAZxn"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "name": "Branch: if/else",
+                "description": "",
+                "id": "3SCtJg"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "name": "Send a response",
+                    "description": "",
+                    "id": "Lnw0K6"
+                  },
+                  "activity": "${SendActivity_Lnw0K6()}"
+                }
+              ]
+            }
+          ],
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "S0d7Ud",
+        "name": "BeginnerAdvice"
+      },
+      "intent": "BeginnerAdvice",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "0k6Dqs"
+          },
+          "activityProcessed": true,
+          "dialog": "BeginnerAdvice"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "motorcycle-first-choice-helper.lg",
+  "id": "Motorcycle-First-Choice-Helper"
+}

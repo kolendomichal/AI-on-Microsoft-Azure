@@ -1,0 +1,51 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_DHQjtc()
+- ```Which part would like to know more about?```
+
+
+
+
+
+
+# SendActivity_3RN3ZE()
+- ```I am sorry I do not have that option. 
+Please select one of the options below```
+
+
+# SendActivity_DiSEbT()
+- ```While sitting on the bike, take it out of gear and roll it forward. Gently apply the front brakes. The brake lever should operate smoothly and the bike should slow to a stop with little to no noise from the brakes. Release the brake lever. It should return smoothly into position and the bike should now roll freely with no dragging of the brake calipers. If they drag, they need work. While braking at speed you should not feel any pulsing in the lever as this would indicated a bent rotor.
+
+Pro Tip: Bring a set of measuring calipers with you and measure the thickness of the rotors at the center. Each rotors is stamped with a minimum thickness.```
+# SendActivity_STYxCZ()
+- ```While straddling the bike, shove down on the front end. The forks should return to position slowly and almost silently. Any loud noise can be bad news. Look at the fork seals. They should be clean and smooth. There should be no fork oil on the tops of the seals or on the forks. If there is a bit of oil around the fork seals the bike may just need new seals which are relatively affordable. But if there are nicks or rust on the fork tubes a more serious repair is needed. The forks themselves should be clean, shiny and smooth. Bounce up and down on the seat. The rear shock(s) should offer some resistance and return the rear end to normal position without springing up and down.```
+
+# SendActivity_9oIj0q()
+- ```If the bike has a sight glass on the side of the engine you can see immediately the color of the oil. If the sight glass is discolored or brownish, the oil may have begun to “varnish” the engine interior. This is caused by not keeping up on frequent oil changes.
+If there is no sight glass, use a stick, cloth, paper towel or other such item and dip it into the oil via the filler cap. Clean syrupy looking appearance is new oil. It’s been changed recently. If the oil is black, you’ll want to ask when the oil was changed last. So, new oil and black oil is normal. What isn’t normal? Water and oil don’t mix. If the oil has white milky streaks in it, water is getting into the engine.You may not want to purchase a bike with this problem unless you’re ready to tear down the engine. Oil impedes wear on an engine but does not fully prevent it. Normally, unless the oil has been recently changed you may feel a very slight grit when you rub a drop between your thumb and fore finger.
+
+Pro Tip: If you feel or see shiny metal flakes in the oil this is very bad news. This engine is eating itself from the inside out. You do NOT want this bike.```
+# SendActivity_3hXeeM()
+- ```Check the tension of the drive chain by pulling it away from the rear sprocket at the three o’clock position. You should not be able to pull it farther than about half way off the sprocket tooth. Any farther and it’s time to replace. The inner area of the chain that contacts the sprocket should be clean, smooth and shiny.
+Pro Tip: If the teeth on the sprocket are leaning over, both the sprocket and the chain have excessive wear and should be replaced.```
+# SendActivity_X54TNC()
+- ```As long as you’re down there checking on the exhaust, you might as well give the frame the once-over. Look closely. You’re looking for dents, scrapes, cracks. Is there any indication the bike has bottomed out, taken a hard landing or been in some kind of accident? Get hands on with the frame too. Slide your hands over as much of the frame as you can. You may feel something you can’t see.
+
+Check the steering head bearings. While holding the front brake lever, rock the bike back and forth. If you feel movement or hear a clicking sound, it’s a good indication that the bearings in the steering head might be loose or worn. Place your hand over the upper triple clamp and frame to feel the movement.
+
+Pro Tip: Check the steering stops on the neck of the frame. This is the metal stop that meets the tabs on the lower steering stem to stop the handlebars from turning. If you see that the metal is bent, bulging or excessively rusty, this can be an indication that the bikes was involved in a crash.```
+
+
+
+# SendActivity_PY2S8F()
+- ```Check the 4 digit DOT numbers on the outer sidewall of the tires. The first two digits indicate the week the tire was manufactured, the second two digits indicate the year. Most recommend to replace tires when they are 6 years old, even if they appear to be in good condition.```
+# SendActivity_Hj7uTT()
+- ```Each bike has its own cold start temperament and you will eventually get to know yours. Make sure the fuel petcock is turned to the “on” or “reserve” position. Depending on the bike you may have an electronic choke that requires no manipulation or you may have a manual cable type choke. If it’s manual, ask the seller to set it at his preferred setting. He’ll be happy to set it for you.
+
+He wants it to want it to start right up for you. Ask him how much throttle he normally gives the bike on startup. If it has an electric starter, use it. Once the engine is running, return the throttle to its normal position. You don’t want to “redline” a cold engine. While the bike is warming up, take the time to notice. Is it running smoothly? Is the engine chugging? (Maybe not enough choke). Look behind you. Is the bike smoking? If your bike is running a fuel/oil mix, (dirt bike) a little smoke is not unusual. If it’s smoking a lot, it could be a fuel/oil ratio mis-match or a timing issue. A street bike should not be smoking.```
+# SendActivity_PTFhcn()
+- ```Ask for all the service records and receipts for the bike. The thoughtful rider will save all service records. Perhaps the seller is the “do it yourself “type. This is not necessarily a bad thing. One of the best used motorcycles I ever bought was off an avid club racer/mechanic. The thoughtful “do it your self-er” should have receipts and records of all repairs.```
+# ConfirmInput_Prompt_t3wzLM()
+- Do you want to ask about another part?
+# ChoiceInput_UnrecognizedPrompt_DHQjtc()
+- Please choose from the options below.

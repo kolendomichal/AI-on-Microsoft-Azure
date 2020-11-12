@@ -1,0 +1,116 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "PtjRL6",
+    "name": "BeginnerMotorcycleDialog",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "FTJ3PW"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "RY2yZM"
+          },
+          "disabled": false,
+          "maxTurnCount": 1,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_RY2yZM()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_RY2yZM()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.brand",
+          "validations": [
+            "#TextInput_Response_o0b1NN.Score >= 0.6"
+          ],
+          "value": "=coalesce(@brand)",
+          "outputFormat": ""
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "XbGc4g"
+          },
+          "assignments": [
+            {
+              "property": "user.brand",
+              "value": "=@brand"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "2TM0R6"
+          },
+          "method": "GET",
+          "headers": {
+            "x-functions-key": "73q/Vz899Yy7DMTBeHNcDCaR37KO43yN1EyCsZyjsfu616af6ZK1sQ=="
+          },
+          "url": "http://motorcycle-details-bot.azurewebsites.net/api/brand/${user.brand}",
+          "responseType": "json",
+          "resultProperty": "dialog.api_response"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "2Nsov5"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_2Nsov5()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_2Nsov5()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineSeparator": ",",
+            "inlineOr": " or "
+          },
+          "choices": "=dialog.api_response.content",
+          "property": "user.selectedModel",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "JAlNY4"
+          },
+          "method": "GET",
+          "headers": {
+            "x-functions-key": "73q/Vz899Yy7DMTBeHNcDCaR37KO43yN1EyCsZyjsfu616af6ZK1sQ=="
+          },
+          "url": "http://motorcycle-details-bot.azurewebsites.net/api/brand/${user.brand}/model/${user.selectedModel}",
+          "responseType": "json",
+          "resultProperty": "dialog.api_response"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "U4OBXM"
+          },
+          "activity": "${SendActivity_U4OBXM()}"
+        }
+      ]
+    }
+  ],
+  "generator": "BeginnerMotorcycleDialog.lg",
+  "recognizer": "BeginnerMotorcycleDialog.lu.qna",
+  "id": "BeginnerMotorcycleDialog"
+}

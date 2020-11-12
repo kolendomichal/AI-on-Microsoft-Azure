@@ -1,0 +1,45 @@
+[import](common.lg)
+
+# SendActivity_037398()
+- ${UnknownIntent()}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# TextInput_Prompt_o0b1NN()
+- Any particular brand you are interested in?
+# SendActivity_psH0Em()
+- So you are interested in ${user.brand} and ${user.apiResponse.content}? 
+# SendActivity_zKgCXv()
+- Check the 4 digit DOT numbers on the outer sidewall of the tires. The first two digits indicate the week the tire was manufactured, the second two digits indicate the year. Most recommend to replace tires when they are 6 years old, even if they appear to be in good condition.
+# SendActivity_P9qQ7k()
+- ${WelcomeUser()}
+
+
+
+
+
+
+
+
+# SendActivity_Lnw0K6()
+- ${WelcomeUser()}
+
+# SendActivity_tOIxmZ()
+- ```Knowing which part is costly to replace is really good. ```
+
+

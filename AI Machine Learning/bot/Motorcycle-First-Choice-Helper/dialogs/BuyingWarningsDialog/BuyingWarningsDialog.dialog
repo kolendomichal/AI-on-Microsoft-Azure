@@ -1,0 +1,236 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "ZBzDIC",
+    "name": "BuyingWarningsDialog",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "a0BMGc"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "DHQjtc"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_DHQjtc()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_DHQjtc()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            "Brakes",
+            "Suspension",
+            "Oil & oil filter",
+            "Chain & Sprocket",
+            "Frame & fork",
+            "Tires & Wheels",
+            "Cold Start",
+            "Background"
+          ],
+          "property": "user.watchoutPart",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          }
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "zb33X7"
+          },
+          "condition": "user.watchoutPart",
+          "cases": [
+            {
+              "value": "Brakes",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "DiSEbT"
+                  },
+                  "activity": "${SendActivity_DiSEbT()}"
+                }
+              ]
+            },
+            {
+              "value": "Suspension",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "STYxCZ"
+                  },
+                  "activity": "${SendActivity_STYxCZ()}"
+                }
+              ]
+            },
+            {
+              "value": "Oil & oil filter",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "9oIj0q"
+                  },
+                  "activity": "${SendActivity_9oIj0q()}"
+                }
+              ]
+            },
+            {
+              "value": "Chain & Sprocket",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "3hXeeM"
+                  },
+                  "activity": "${SendActivity_3hXeeM()}"
+                }
+              ]
+            },
+            {
+              "value": "Frame & fork",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "X54TNC"
+                  },
+                  "activity": "${SendActivity_X54TNC()}"
+                }
+              ]
+            },
+            {
+              "value": "Tires & Wheels",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "PY2S8F"
+                  },
+                  "activity": "${SendActivity_PY2S8F()}"
+                }
+              ]
+            },
+            {
+              "value": "Cold Start",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "Hj7uTT"
+                  },
+                  "activity": "${SendActivity_Hj7uTT()}"
+                }
+              ]
+            },
+            {
+              "value": "Background",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "PTFhcn"
+                  },
+                  "activity": "${SendActivity_PTFhcn()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "3RN3ZE"
+              },
+              "activity": "${SendActivity_3RN3ZE()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "1OWOQh"
+          },
+          "property": "user.watchoutPart"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "t3wzLM"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_t3wzLM()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "user.confirmed"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "oMZYsK"
+          },
+          "condition": "user.confirmed == true",
+          "actions": [
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "DFdVmB"
+              },
+              "property": "user.confirmed"
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "2v1kar"
+              },
+              "activityProcessed": true
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "QjN8zy"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "BuyingWarningsDialog.lg",
+  "recognizer": "BuyingWarningsDialog.lu.qna",
+  "id": "BuyingWarningsDialog"
+}

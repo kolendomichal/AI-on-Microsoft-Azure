@@ -1,0 +1,67 @@
+
+# cancel
+- cancel
+- cancel that
+- stop that
+- abort
+
+
+
+# BeginnerMotorcycle
+> add some example phrases to trigger this intent:
+- what is the best starting bike?
+- popular beginner models
+- best beginner motorcycle?
+- best beginner bike?
+- what is the best selling model?
+- with what should i start?
+- starting motorcycle?
+- what beginner bike do you recommend?
+- what motorcycle do you recommend?
+# BuyingWarnings
+- what to watch out for when buying used bike?
+- what to look out for when buying bike
+- which parts should i be careful of when buying a motorcycle?
+- what to look out for when buying a motorcycle?
+- what are the things i should look out for when buying a motorcycle?
+- what to watchout for?
+- what to be careful of?
+
+
+
+# MotorcycleBrandDecision
+- I am interested in {@brand = Yamaha}
+- I was thinking of a {@brand = Yamaha}
+- I like how {@brand = Yamaha} looks like
+- {@brand = Yamaha}
+- maybe {@brand = Yamaha}
+
+> Add patterns
+- I am interested [in] {@brand}
+- I was thinking [of] {@brand}
+- I like {@brand} looks like
+- maybe {@brand}
+
+> Add entites
+@ ml brand
+
+
+# BeginnerAdvice
+> add some example phrases to trigger this intent:
+- What is the best helmet?
+- best helmet?
+- beginner helmet
+- what is the best beginner helmet?
+- best starting helmet?
+- What is the best jacket?
+- jacket?	
+- the best jacket?
+- beginner jacket?
+- beginner motorcycle jacket?
+- motorcycle jacket?
+- What is the best beginner motorcycle jacket?
+- What motorcycles gloves do you recommend?
+- What are the best motorcycle gloves?
+- best motorcycle gloves?
+- best starting motorcycle gloves?
+- What is the best beginner motorcycle jacket?

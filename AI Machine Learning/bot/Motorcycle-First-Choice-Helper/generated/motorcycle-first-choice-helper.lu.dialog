@@ -1,0 +1,8 @@
+{
+    "$kind": "Microsoft.MultiLanguageRecognizer",
+    "id": "LUIS_motorcycle-first-choice-helper",
+    "recognizers": {
+        "en-us": "motorcycle-first-choice-helper.en-us.lu",
+        "": "motorcycle-first-choice-helper.en-us.lu"
+    }
+}

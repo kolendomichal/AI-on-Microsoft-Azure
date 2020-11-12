@@ -1,0 +1,25 @@
+[import](common.lg)
+
+# TextInput_Prompt_RY2yZM()
+- ```So you want to buy  a bike? 
+Which brand you are interested in?```
+# SendActivity_U4OBXM()
+[HeroCard
+     title = ${user.brand}
+    subtitle = ${user.selectedModel}
+    text = ${dialog.api_response.content.details}
+    image = ${dialog.api_response.content.imgUrl}
+   ]
+# TextInput_UnrecognizedPrompt_RY2yZM()
+- ```There is not a brand like that. Example brands.:
+Kawasaki, Yamaha, Suzuki```
+# ChoiceInput_Prompt_2Nsov5()
+-```Which one of these models are you interested in?```
+
+
+
+
+
+
+# ChoiceInput_UnrecognizedPrompt_2Nsov5()
+- Please select one of the model below.

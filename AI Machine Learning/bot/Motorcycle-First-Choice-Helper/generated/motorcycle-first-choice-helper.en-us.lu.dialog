@@ -1,0 +1,7 @@
+{
+    "$kind": "Microsoft.LuisRecognizer",
+    "id": "LUIS_motorcycle-first-choice-helper",
+    "applicationId": "=settings.luis.motorcycle_first_choice_helper_en_us_lu",
+    "endpoint": "=settings.luis.endpoint",
+    "endpointKey": "=settings.luis.endpointKey"
+}

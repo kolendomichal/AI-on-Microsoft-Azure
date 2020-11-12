@@ -1,0 +1,8 @@
+{
+    "$kind": "Microsoft.MultiLanguageRecognizer",
+    "id": "LUIS_BeginnerMotorcycleDialog",
+    "recognizers": {
+        "en-us": "BeginnerMotorcycleDialog.en-us.lu",
+        "": "BeginnerMotorcycleDialog.en-us.lu"
+    }
+}

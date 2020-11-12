@@ -1,0 +1,27 @@
+
+# TextInput_Response_RY2yZM
+- I am interested in {@brand = Yamaha}
+- I was thinking of a {@brand = Kawasaki}
+- I like how {@brand = Suzuki} looks like
+- maybe {@brand = Yamaha}
+- how about {@brand = Yamaha}
+- I am interested in {@brand = yamaha}
+- I was thinking of a {@brand = kawasaki}
+- I like how {@brand = suzuki} looks like
+- maybe {@brand = yamaha}
+- how about {@brand = yamaha}
+
+> Add patterns
+- I am interested [in] {@brand}
+- I was thinking [of] {@brand}
+- I like {@brand} looks like
+- maybe {@brand}
+
+> Add entites
+@ ml brand
+
+
+
+
+
+
