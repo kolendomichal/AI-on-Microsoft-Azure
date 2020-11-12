@@ -41,7 +41,7 @@ Bot was created using Bot Framework Composer. Every action and dialog was create
      4. Save and train your knowledge base
      5. Go to settings and copy **KnowledgeBaseId** , **EndpointKey** and **Host**. These settings will be pasted into bot settings
    - Azure Function
-     1. Open project located in bot framework folder [MotorcycleChoiceHelper.sln](AI Machine Learning\bot\MotorcycleChoiceHelper\MotorcycleChoiceHelper.sln).
+     1. Open project located in bot framework folder [MotorcycleChoiceHelper.sln](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Machine%20Learning/bot/MotorcycleChoiceHelper/MotorcycleChoiceHelper.sln).
      2. Launch it in Visual Studio 2019.
      3. Right click project name and select **Publish**. Go through all the steps and deploy it in your resource group.
      4. Navigate to your Azure Function in Azure and copy App key **_master**
