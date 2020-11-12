@@ -20,7 +20,7 @@ It is composed of three main services:
 
 ### Architecture Diagram
 
-![bot_architecture](./bot/graphics/BotArchitecture.jpg "Azure Bot Architecture")
+![bot_architecture](./graphics/BotArchitecture.jpg "Azure Bot Architecture")
 
 ## How to recreate the bot
 
