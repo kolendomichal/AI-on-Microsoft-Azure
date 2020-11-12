@@ -49,7 +49,7 @@ Bot was created using Bot Framework Composer. Every action and dialog was create
 Images with keys to copy:
 
 **Authoring key**
-![authoring_key](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Machine%20Learning/bot/graphics/authoring_key.png)
+![authoring_key](./graphics/authoring_key.png)
 
 **KnowledgeBaseId** , **EndpointKey** and **Host**.
 ![qna](./graphics/qna.png)
