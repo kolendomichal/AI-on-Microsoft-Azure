@@ -1,0 +1,49 @@
+﻿{
+  "motorcycles": [
+    {
+      "brand": "Yamaha",
+      "models": [
+        {
+          "name": "MT-07",
+          "details": "Engine type: 2-Cylinder\n 4-stroke, Liquid-cooled \n  Maximum power: 55.0kW (74.8PS) @ 9,000 rpm\n Maximum Torque: 68.0Nm (6.9kg-m) @ 6,500 rpm.\n The most populart starting bike. This bike is commonly used for passing 'A2' and 'A' driving licence. Because of the torquiness, it is really fun to ride around town.\n Price: 7499$",
+          "imgUrl": "https://storageaccountaiona8927.blob.core.windows.net/blob/mt07.jpg"
+        },
+        {
+          "name": "XJ6",
+          "details": "Engine type: 2-Cylinder\n 4-stroke, Liquid-cooled \n Maximum power: 68.0kW (74.8PS) @ 10,000 rpm\n Maximum Torque: 59.7Nm @ 8,500 rpm.\n This bike was a sort of predecessor for MT-07. Used for passing driving licence, is much heavier than its' counterpart (by 20 kg) and less-torque.\n You can buy a used one for 3500$ ",
+          "imgUrl": "https://storageaccountaiona8927.blob.core.windows.net/blob/xj6.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Kawasaki",
+      "models": [
+        {
+          "name": "Z650",
+          "details": "Engine type: 2-Cylinder\n 4-stroke, Liquid-cooled \n Maximum power: 50.0kW (68PS) @ 8,000 rpm\n Maximum Torque: 65.7Nm @ 6,500 rpm.\n This bike is a contester for MT-07. With its greenish-kawasaki colors, it features a little less torque and power than MT-07, but has some additional features like smartphone connectivity. You can buy a newone for 7349$ ",
+          "imgUrl": "https://storageaccountaiona8927.blob.core.windows.net/blob/z650.jpg"
+        },
+        {
+          "name": "GPZ500",
+          "details": "",
+          "imgUrl": "https://storageaccountaiona8927.blob.core.windows.net/blob/gpz500.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "models": [
+        {
+          "name": "SV650",
+          "details": "Engine type: 2-Cylinder\n 4-stroke, Liquid-cooled \n Maximum power: 56.0kW (76PS) @ 8,000 rpm\n Maximum Torque: 61.7Nm @ 7,500 rpm.\n Redesigned model from the old SV 650, with new features like ABS. Contestant for MT-07, but MT-07 still dominated the market.\n Price for new model is 7499$",
+          "imgUrl": "https://storageaccountaiona8927.blob.core.windows.net/blob/sv650.jpg"
+        },
+        {
+          "name": "GS500",
+          "details": "",
+          "imgUrl": "https://storageaccountaiona8927.blob.core.windows.net/blob/gs500.jpg"
+        }
+      ]
+    }
+  ]
+}
