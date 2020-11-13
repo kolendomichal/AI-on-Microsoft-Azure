@@ -7,7 +7,7 @@ This is a report from creating chat bot for help with coronavirus and medical ca
 Bot was created to help young passionate future motorcycle riders to find some good starting motorcycles, learn what to watchout for when buying a used motorcycle and some advices on what gear to wear!
 
 ### Demo
-Link to [demo](link_to_demo)
+Link to [DEMO](https://www.youtube.com/watch?v=AepTL3Bky9g&feature=youtu.be&ab_channel=Micha%C5%82Kolendo)
 
 ## Architecture
 
