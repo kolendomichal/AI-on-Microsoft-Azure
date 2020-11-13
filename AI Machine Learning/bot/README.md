@@ -1,12 +1,11 @@
 # MotorcycleFirstChoiceHelperBot - built with Azure Bot Service
 
-This is a report from creating chat bot for help with coronavirus and medical cases during the pandemic.
-
 ## Use Case
 
 Bot was created to help young passionate future motorcycle riders to find some good starting motorcycles, learn what to watchout for when buying a used motorcycle and some advices on what gear to wear!
 
 ### Demo
+
 Link to [DEMO](https://www.youtube.com/watch?v=AepTL3Bky9g&feature=youtu.be&ab_channel=Micha%C5%82Kolendo)
 
 ## Architecture
@@ -37,10 +36,10 @@ Bot was created using Bot Framework Composer. Every action and dialog was create
    - QnA Service
      1. Create QnA service.
      2. Go to [qnamaker.ai](https://www.qnamaker.ai/)
-     3. Create new knowledge base and in step 4 import knowledge base file from [here](knowledge base link)
-     4. Save and train your knowledge base
+     3. Create new knowledge base and in step 4 import knowledge base file from [here](knowledge base link).
+     4. Save and train your knowledge base.
      5. Go to settings and copy **KnowledgeBaseId** , **EndpointKey** and **Host**. These settings will be pasted into bot settings
-   - Azure Function
+   - Azure Function.
      1. Open project located in bot framework folder [MotorcycleChoiceHelper.sln](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Machine%20Learning/bot/MotorcycleChoiceHelper/MotorcycleChoiceHelper.sln).
      2. Launch it in Visual Studio 2019.
      3. Right click project name and select **Publish**. Go through all the steps and deploy it in your resource group.
