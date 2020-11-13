@@ -36,7 +36,7 @@ Bot was created using Bot Framework Composer. Every action and dialog was create
    - QnA Service
      1. Create QnA service.
      2. Go to [qnamaker.ai](https://www.qnamaker.ai/)
-     3. Create new knowledge base and in step 4 import knowledge base file from [here](knowledge base link).
+     3. Create new knowledge base and in step 4 import knowledge base file from [here](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Machine%20Learning/bot/Motorcycle-First-Choice-Helper/36518106-d13d-4826-8b0f-deed88b02892-KB.tsv)).
      4. Save and train your knowledge base.
      5. Go to settings and copy **KnowledgeBaseId** , **EndpointKey** and **Host**. These settings will be pasted into bot settings
    - Azure Function.
