@@ -52,13 +52,17 @@ Images with keys to copy:
 ![authoring_key](./graphics/authoring_key.png)
 
 **KnowledgeBaseId** , **EndpointKey** and **Host**.
+
 ![qna](./graphics/qna.png)
 
 **Function App Key**
+
 ![azure_function](./graphics/azure_function.png)
 
 Paste LUIS and QnA settings into bot settings:
+
 ![bot_settings](./graphics/bot_settings.png)
 
 Paste Azure Function app key into two HTTP requests in **BeginnerMotorcycleDialog**
+
 ![bot_settings](./graphics/http_req.png)
