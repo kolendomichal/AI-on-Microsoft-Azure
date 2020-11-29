@@ -16,5 +16,6 @@ Repository with reports for lab:
 |  Date  | Subject | Link |
 | ---- | ----------- | --------- |
 | 25.11 | Computer Vision API | [Computer Vision API.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Computer%20Vision%20API.md)
-| 02.12 | Custom Vision | [Custom Vision.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Computer%20Vision%20API.md)
-| 09.12 | Video Indexer | [Video Indexer.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Computer%20Vision%20API.md)
+| 02.12 | Custom Vision | [Custom Vision.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Custom%20Vision.md)
+| 09.12 | Video Indexer | [Video Indexer.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Video%20Indexer.md)
+| 09.12 | Covid Mask Recognizer Project | [Covid Mask Recognizer Report.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Covid%20Mask%20Recognizer%20Report.md)
