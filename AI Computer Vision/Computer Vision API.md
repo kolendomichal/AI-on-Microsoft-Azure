@@ -12,8 +12,6 @@ Azure Computer Vision API gives a possibility to identify facial details in pict
 
 1. Recognize customers' emotions while he is buying at the shop.
 
-1. Automatic sorting machine in factories. A large dataset of concrete images would have to be provided to improve sorting algorithm.
-
 ## How to
 
 Prerequisities:
@@ -23,7 +21,7 @@ Prerequisities:
 
 This is necessary to log in to Azure Portal and start creating your new resource.
 
-1. In order to create a resource for desired action, in azure portal browse 
+1. In order to create a resource for desired action, in azure portal browse
 AI + Machine Learning.
 1. Select **Face** resource.
 1. Copy and save the values of KEY 1 and ENDPOINT. These will be used when connecting to the API.
