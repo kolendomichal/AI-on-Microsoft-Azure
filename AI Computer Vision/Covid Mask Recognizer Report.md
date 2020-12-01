@@ -20,12 +20,14 @@ The whole system was built on this framework with a HttpClient making prediction
 
 ## How to recreate the system
 
-Prerequisites:
+### Prerequisites
 
 - microsoft account
 - active subscription on given microsoft account
 - installed [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - IDE for launching application [Visual Studio 2019](https://visualstudio.microsoft.com/pl/vs/) or [VS Code](https://code.visualstudio.com/)
+
+### Instructions
 
 1. Go to Azure Portal and Create a new resource group.
 
@@ -38,19 +40,22 @@ Prerequisites:
 
 1. Select **Create new project** and in the dropdown "Resource" you should select your resource created before.
 
-1. Select Project Type - Classification, Classification Type - Multilabel and Domain - General.
+1. Select:
+   - Project Type - Classification
+   - Classification Type - Multilabel
+   - Domain - General
 
 1. Click **Add images** and upload images from [faces with mask dataset](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/with). Add tag **with-mask**.
 
 1. Repeat the process for [faces without mask dataset](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/without). Add tag **without-mask**.
 
-1. Next, Train the model. That might take a while so be patient.
+1. Train the model. That might take a while so be *patient*.
 
 1. After training is finished, go to **Performance** tab and click **Publish**.
 
-1. After publishin your prediction, click on **Prediction Url**.  Copy second **URL** and **Prediction-Key**
+1. After publishin your prediction, click on **Prediction Url**.  Copy second **URL** and **Prediction-Key**.
 
-1. Lastly, edit [appsettings.json](path_to_appsettings.json) and supply URL to *CustomVisionUrl* and Prediction-Key to *CustomVisionSubscriptionKey*.
+1. Lastly, edit [appsettings.json](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/MaskRecognizer/appsettings.json) and supply **URL** to *CustomVisionUrl* and **Prediction-Key** to *CustomVisionSubscriptionKey*.
 
 1. Launch application and test it yourself!
 
