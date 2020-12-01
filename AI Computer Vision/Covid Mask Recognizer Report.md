@@ -40,9 +40,9 @@ Prerequisites:
 
 1. Select Project Type - Classification, Classification Type - Multilabel and Domain - General.
 
-1. Click **Add images** and upload images from [faces with mask dataset](link_to_dataset). Add tag **with-mask**.
+1. Click **Add images** and upload images from [faces with mask dataset](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/with). Add tag **with-mask**.
 
-1. Repeat the process for [faces without mask dataset](link_to_dataset). Add tag **without-mask**.
+1. Repeat the process for [faces without mask dataset](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/without). Add tag **without-mask**.
 
 1. Next, Train the model. That might take a while so be patient.
 
