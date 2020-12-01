@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    <link rel="stylesheet" href="~/css/dragdrop.css"/>
+}
+
+<div class="text-center">
+    <div class="row d-flex justify-content-center mt-100">
+        <form id="checkPhoto" method="POST" enctype="multipart/form-data" action="@Url.Action("ClassifyMaskImage", "Home")" class="col-md-12 col-lg-12" metho>
+            <div class="row d-flex justify-content-center">
+                <div id="video-canvas" class="col-md-12" >
+                    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+                    <canvas id="canvas" class="d-none"></canvas>
+                </div>
+                <div id="drag-drop" class="col-md-12" style="display: none">
+                    <div class="form-group files">
+                        <input id="input-file" type="file" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 mt-2 text-center">
+                    <button class="btn btn-success rounded-pill" type="submit">Check</button>
+                    <div id="alert-result" class="alert mt-2" role="alert">
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+                <button id="uploadPhoto" class="btn btn-primary">Upload Photo</button>
+                <span> Or </span>
+                <button id="webcamPhoto" class="btn btn-primary">Take a Photo</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            const webcamElement = document.getElementById('webcam');
+            const canvasElement = document.getElementById('canvas');
+            const snapSoundElement = document.getElementById('snapSound');
+            const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
+            startWebCam();
+            initializeSwapFunctionButtons();
+            checkFile();
+
+            function checkFile() {
+                $('#checkPhoto').submit(function(e) {
+                    e.preventDefault();
+                    let file = null;
+                    let formData = new FormData();
+                    if ($("#video-canvas").is(":visible")) {
+                        let picture = webcam.snap();
+                        var block = picture.split(";");
+                        var contentType = block[0].split(":")[1];
+                        var realData = block[1].split(",")[1];
+                        file = b64toBlob(realData, contentType);
+                    } else {
+                        file = $('#input-file').prop('files')[0];
+                    }
+                    formData.append("file", file);
+                    $.ajax({
+                        url: this.action,
+                        type: this.method,
+                        data: formData,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                            const result = data.message.toString();
+                            let text = '';
+                            $('#alert-result').removeClass();
+                            $('#alert-result').addClass("alert mt-1");
+                            if (result === '@((int)PredictionResult.WithMask)') {
+                                $('#alert-result').addClass("alert-success");
+                                text = "Person is wearing a mask!";
+                            } else if (result === '@((int)PredictionResult.WithoutMask)') {
+                                $('#alert-result').addClass("alert-warning");
+                                text = "Person is NOT wearing a mask!";
+                            } else {
+                                $('#alert-result').addClass("alert-danger");
+                                text = "Could not recognize. Are you sending image of a face?";
+                            }
+                            $('#alert-result').text(text);
+                            $('#alert-result').css("visibility", "visible");
+                        }
+                    });
+                });
+            };
+
+            function initializeSwapFunctionButtons() {
+                $('#alert-result').css("visibility", "hidden");
+                $("#uploadPhoto").click(function () {
+                    $(this).css("background-color", "navy");
+                    $('#webcamPhoto').css("background-color", "#1b6ec2");
+                    $('#alert-result').css("visibility", "hidden");
+                    stopWebCam();
+                    $("#drag-drop").show();
+                });
+                $("#webcamPhoto").click(function () {
+                    $(this).css("background-color", "navy");
+                    $('#uploadPhoto').css("background-color", "#1b6ec2");
+                    $('#alert-result').css("visibility", "hidden");
+                    $("#drag-drop").hide();
+                    startWebCam();
+                });
+            }
+
+            function startWebCam() {
+                $("#video-canvas").show();
+                webcam.start()
+                    .then(result => {
+                        console.log("webcam started");
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
+            }
+
+            function stopWebCam() {
+                webcam.stop();
+                $("#video-canvas").hide();
+            }
+
+            function b64toBlob(b64Data, contentType, sliceSize) {
+                contentType = contentType || '';
+                sliceSize = sliceSize || 512;
+
+                var byteCharacters = atob(b64Data);
+                var byteArrays = [];
+
+                for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                    var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+                    var byteNumbers = new Array(slice.length);
+                    for (var i = 0; i < slice.length; i++) {
+                        byteNumbers[i] = slice.charCodeAt(i);
+                    }
+
+                    var byteArray = new Uint8Array(byteNumbers);
+
+                    byteArrays.push(byteArray);
+                }
+
+                var blob = new Blob(byteArrays, { type: contentType });
+                return blob;
+            }
+        });
+
+
+    </script>
+}
