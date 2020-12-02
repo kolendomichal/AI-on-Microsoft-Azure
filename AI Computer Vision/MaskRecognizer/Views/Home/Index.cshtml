@@ -8,7 +8,7 @@
         <form id="checkPhoto" method="POST" enctype="multipart/form-data" action="@Url.Action("ClassifyMaskImage", "Home")" class="col-md-12 col-lg-12" metho>
             <div class="row d-flex justify-content-center">
                 <div id="video-canvas" class="col-md-12" >
-                    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+                    <video id="webcam" autoplay playsinline width="640" height="360"></video>
                     <canvas id="canvas" class="d-none"></canvas>
                 </div>
                 <div id="drag-drop" class="col-md-12" style="display: none">
@@ -19,9 +19,14 @@
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12 mt-2 text-center">
-                    <button class="btn btn-success rounded-pill" type="submit">Check</button>
+                    <div>
+                        <button class="btn btn-success rounded-pill" type="submit">Check</button>
+                    </div>
+                    <div id="spinner" class="spinner-border text-primary mt-2"  role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
                     <div id="alert-result" class="alert mt-2" role="alert">
-                        
+
                     </div>
                 </div>
             </div>
@@ -49,10 +54,11 @@
             startWebCam();
             initializeSwapFunctionButtons();
             checkFile();
-
+            $('#spinner').hide();
             function checkFile() {
-                $('#checkPhoto').submit(function(e) {
+                $('#checkPhoto').submit(function (e) {
                     e.preventDefault();
+                    $('#spinner').show();
                     let file = null;
                     let formData = new FormData();
                     if ($("#video-canvas").is(":visible")) {
@@ -64,6 +70,15 @@
                     } else {
                         file = $('#input-file').prop('files')[0];
                     }
+                    if (file == null) {
+                        $('#alert-result').removeClass();
+                        $('#alert-result').addClass("alert mt-1");
+                        $('#alert-result').addClass("alert-danger");
+                        $('#alert-result').text("Please insert an image!");
+                        $('#alert-result').css("visibility", "visible");
+                        $('#spinner').hide();
+                    }
+
                     formData.append("file", file);
                     $.ajax({
                         url: this.action,
@@ -88,6 +103,7 @@
                                 text = "Could not recognize. Are you sending image of a face?";
                             }
                             $('#alert-result').text(text);
+                            $('#spinner').hide();
                             $('#alert-result').css("visibility", "visible");
                         }
                     });
@@ -95,6 +111,7 @@
             };
 
             function initializeSwapFunctionButtons() {
+                $('#webcamPhoto').css("background-color", "navy");
                 $('#alert-result').css("visibility", "hidden");
                 $("#uploadPhoto").click(function () {
                     $(this).css("background-color", "navy");
@@ -116,7 +133,6 @@
                 $("#video-canvas").show();
                 webcam.start()
                     .then(result => {
-                        console.log("webcam started");
                     })
                     .catch(err => {
                         console.log(err);
