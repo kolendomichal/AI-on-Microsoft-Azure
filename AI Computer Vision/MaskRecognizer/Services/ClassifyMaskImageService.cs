@@ -46,13 +46,14 @@ namespace MaskRecognizer.Services
 
         private static PredictionResult CheckPredictionResult(PredictionApiResponse predictionApiResponse)
         {
-            var successfulPrediction = predictionApiResponse.predictions.FirstOrDefault(prediction => prediction.probability > 0.99);
+            var successfulPrediction = predictionApiResponse.predictions.FirstOrDefault(prediction => prediction.probability > 0.9);
 
             return (successfulPrediction?.tagName) switch
             {
                 PredictionTags.WithMask => PredictionResult.WithMask,
                 PredictionTags.WithoutMask => PredictionResult.WithoutMask,
-                _ => PredictionResult.NotRecognized,
+                PredictionTags.Negative => PredictionResult.Negative,
+                _ => PredictionResult.Negative,
             };
         }
     }

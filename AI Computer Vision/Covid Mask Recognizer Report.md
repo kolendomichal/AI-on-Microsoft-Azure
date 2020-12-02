@@ -7,7 +7,7 @@ hotels, government facilities to alarm if a person without safety precautions is
 
 ### Demo
 
-Link to [DEMO](https://www.youtube.com/watch?v=AepTL3Bky9g&feature=youtu.be&ab_channel=Micha%C5%82Kolendo)
+Link to [DEMO](https://www.youtube.com/watch?v=0TFPeumxgNw&ab_channel=Micha%C5%82Kolendo)
 
 ## Architecture
 
@@ -48,6 +48,8 @@ The whole system was built on this framework with a HttpClient making prediction
 1. Click **Add images** and upload images from [faces with mask dataset](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/with). Add tag **with-mask**.
 
 1. Repeat the process for [faces without mask dataset](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/without). Add tag **without-mask**.
+
+1. Repeat the process for [other](https://github.com/kolendomichal/AI-on-Microsoft-Azure/tree/master/AI%20Computer%20Vision/MaskRecognizer/DataSets/without). Add tag **Negative**.
 
 1. Train the model. That might take a while so be *patient*.
 
