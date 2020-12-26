@@ -19,3 +19,9 @@ Repository with reports for lab:
 | 02.12 | Custom Vision | [Custom Vision.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Custom%20Vision.md)
 | 09.12 | Video Indexer | [Video Indexer.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Video%20Indexer.md)
 | 09.12 | Covid Mask Recognizer Project | [Covid Mask Recognizer Report.md](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/AI%20Computer%20Vision/Covid%20Mask%20Recognizer%20Report.md)
+
+## Automated Machine Learning
+
+|  Date  | Subject | Link |
+| ---- | ----------- | --------- |
+| 27.01 | Auto ML | [Salary_Prediction_SF.ipynb](https://github.com/kolendomichal/AI-on-Microsoft-Azure/blob/master/Automated%20Machine%20Learning/Jupyter%20AML%20Notebook/Salary_Prediction_SF.ipynb)
